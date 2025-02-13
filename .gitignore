@@ -1,0 +1,110 @@
+# General OS generated files #
+######################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+.vscode/
+
+# Node.js and Frontend (e.g., React, Angular, Vue) #
+#####################################################
+node_modules/
+dist/         # For most build tools like Webpack, Parcel, etc.
+build/        # Alternative build directory name
+.parcel-cache/ # Parcel bundler cache
+.cache/       # Generic cache directory
+.eslintcache   # ESLint cache
+.stylelintcache # Stylelint cache
+yarn-error.log
+npm-debug.log*
+package-lock.json # only if you are not sharing this
+yarn.lock       # only if you are not sharing this
+
+# Backend (e.g., Node.js, Python, Java) #
+###########################################
+# Node.js backend
+backend/node_modules/  # Or the specific path to your backend's node_modules
+backend/dist/          # If your backend has a build process
+backend/build/
+backend/.parcel-cache/
+backend/.cache/
+backend/npm-debug.log*
+backend/yarn-error.log
+backend/package-lock.json # only if you are not sharing this
+backend/yarn.lock       # only if you are not sharing this
+
+# Python backend
+backend/*.pyc
+backend/__pycache__/
+backend/.venv/      # Virtual environment directory
+backend/env/         # Alternative virtual environment directory
+backend/instance/    # Flask instance folder
+backend/.pytest_cache/ # pytest cache directory
+backend/.coverage
+backend/htmlcov/
+backend/.tox/
+
+# Java backend (example - adjust for your specific framework)
+backend/.gradle/
+backend/build/
+backend/out/
+
+# Dependency management (if applicable to the backend)
+backend/*.lock
+
+# General Backend stuff
+backend/.idea/      # IntelliJ IDEA project files
+backend/*.iml       # IntelliJ IDEA module files
+
+# Environment files (VERY IMPORTANT - NEVER commit these!) #
+############################################################
+.env
+pest-control-app/.env
+server/.env
+*env.local
+*env.*.local
+
+# Log files #
+###############
+*.log
+backend/*.log
+
+# Compiled files #
+##################
+*.class
+*.pyc
+*.dll
+*.exe
+*.out
+*.o
+*.a
+*.so
+*.dylib
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# OS or Editor Folders #
+########################
+.idea
+.history
+tmp/
+temp/
+*.tmproj/
+*.bak
+*.$$$
+*~.nib
+*.nch
+*.log
