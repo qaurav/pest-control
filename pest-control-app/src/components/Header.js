@@ -14,6 +14,8 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll';
+// import logo from '../../public/expertpestlogo.jpg'; 
+
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -53,18 +55,27 @@ const Header = () => {
     <AppBar position="sticky" sx={{ bgcolor: 'green.700' }}>
       <Container maxWidth="lg">
         <Toolbar>
-          <Typography
-            variant="h5"
-            component={ScrollLink}
-            to="home"
-            sx={{
-              flexGrow: 1,
-              cursor: 'pointer',
-              fontWeight: 'bold',
-            }}
-          >
-            Expert Pest Control Sydney
-          </Typography>
+        <Box
+  component={ScrollLink}
+  to="home"
+  sx={{
+    flexGrow: 1,
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center'
+  }}
+>
+  <img 
+    src="/Logo.jpg"
+    alt="Expert Pest Control Sydney" 
+    style={{
+      height: '50px', // Adjust height as needed
+      width: 'auto',
+      // maxWidth: '200px',
+      objectFit: 'cover'
+    }}
+  />
+</Box>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
             {menuItems.map((item) => (

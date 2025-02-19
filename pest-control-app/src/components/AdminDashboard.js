@@ -16,7 +16,7 @@ import BookingList from './BookingList';
 import BookingForm from './BookingForm';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
-import { fetchBookings, createBooking, updateBooking } from '../services/api';
+import { fetchBookings, createBooking, updateBooking, deleteBooking } from '../services/api';
 
 const AdminDashboard = () => {
   const [bookings, setBookings] = useState([]);

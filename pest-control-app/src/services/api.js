@@ -24,12 +24,13 @@ export const fetchBookings = () => {
   return api.get('/bookings').then(response => response.data);
 };
 
-export const updateBooking = (id, updateData) => {
-  return api.patch(`/bookings/${id}`, updateData);
+export const updateBooking = async (id, bookingData) => {
+  const response = await axios.patch(`/bookings/${id}`, bookingData);
+  return response;
 };
-
-export const deleteBooking = (id) => {
-  return api.delete(`/bookings/${id}`);
+export const deleteBooking = async (bookingId) => {
+  const response = await api.delete(`/bookings/${bookingId}`);
+  return response;
 };
 
 export const login = (credentials) => {

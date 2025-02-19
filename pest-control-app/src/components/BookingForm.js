@@ -66,13 +66,32 @@ const BookingForm = ({ open, handleClose, booking, onSubmit }) => {
         date: formattedDate,
       };
       
-      const response = await axios.post(
-        "http://localhost:5000/api/bookings",
-        payload
-      );
+      // const response = await axios.post(
+      //   "http://localhost:5000/api/bookings",
+      //   payload
+      // );
+      let response;
+      if (booking) {
+        // Handle edit
+        response = await axios.patch(
+          `http://localhost:5000/api/bookings/${booking._id}`,
+          payload,
+          {
+            headers: {
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+          }
+        );
+      } else {
+        // Handle create
+        response = await axios.post(
+          "http://localhost:5000/api/bookings",
+          payload
+        );
+      }
 
       if (response.data) {
-        alert("Booking successful!");
+        alert(booking ? "Booking updated successfully!" : "Booking successful!");
         onSubmit(response.data);
         handleClose();
       }
