@@ -1,0 +1,13 @@
+{
+    "name": "pestcontrolwebapp",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "start:backend": "cd server && npm start",
+      "start:pest-control-app": "cd expert-pest-control && npm start",
+      "start:harbour-pest-control": "cd harbour-pest-control && npm start",
+      "start:possum-removal-sydney": "cd possum-removal-sydney && npm start",
+      "install:all": "npm install && cd server && npm install && cd ../expert-pest-control && npm install && cd ../harbour-pest-control && npm install && cd ../possum-removal-sydney && npm install"
+    }
+  }
+  
